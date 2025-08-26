@@ -1,21 +1,21 @@
-// *********************
-// Role of the component: products section intended to be on the home page
-// Name of the component: ProductsSection.tsx
-// Developer: Aleksandar Kuzmanovic
-// Version: 1.0
-// Component call: <ProductsSection slug={slug} />
-// Input parameters: no input parameters
-// Output: products grid
-// *********************
+"use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
 import Heading from "./Heading";
 
-const ProductsSection = async () => {
-  // sending API request for getting all products
-  const data = await fetch("http://localhost:3001/api/products");
-  const products = await data.json();
+const ProductsSection = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const res = await fetch("http://localhost:3001/api/products");
+      const data = await res.json();
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
+
   return (
     <div className="bg-blue-500 border-t-4 border-white">
       <div className="max-w-screen-2xl mx-auto pt-20">
