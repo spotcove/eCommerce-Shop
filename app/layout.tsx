@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components";
 import SessionProvider from "@/utils/SessionProvider";
@@ -10,7 +10,10 @@ import 'svgmap/dist/svgMap.min.css';
 
 
 
-const inter = Inter({ subsets: ["latin"] });
+const josefin = Josefin_Sans({ 
+  subsets: ['latin'], 
+  weight: ['400', '700'] // specify the weights you need
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,13 +29,13 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en" data-theme="light">
-      <body className={inter.className}>
+      <body className={josefin.className}>
       <SessionProvider session={session}>
         <Header />
         <Providers>
         {children}
         </Providers>
-        <Footer />
+        {/*<Footer />*/}
       </SessionProvider>
         </body>
     </html>

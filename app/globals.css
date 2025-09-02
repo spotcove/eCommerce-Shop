@@ -7,6 +7,58 @@
     --range-shdw: #3B82F6;
 }
 
+:root {
+  /* Light theme vars */
+  --background: #f8f8f8;
+  --primary: #212121;
+  --secondary: #6e6e6e;
+  --tertiary: #99b998;
+  --light: #fefefe;
+  --highlight: #E8F4DC;
+  --dark: #1A3827;
+  --bs-primary-rgb: 12, 76, 40;
+}
+
+html[data-theme="dark"] {
+  --background: #031a0d;
+  --foreground: #ededed;
+  --primary: #e0ece6;
+  --secondary: #157347;
+  --tertiary: #D49A3C;
+  --light: #F5F5F5;
+  --highlight: #E8F4DC;
+  --dark: #1A3827;
+  --bs-primary-rgb: 12, 76, 40;
+}
+
+.bg-primary {
+  background-color: var(--light) !important;
+}
+
+.bg-secondary {
+  background-color: var(--background) !important;
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.text-tertiary {
+  color: var(--tertiary) !important;
+}
+
+.text-light {
+  color: var(--light) !important;
+}
+
 .checkbox:checked, .checkbox[checked="true"], .checkbox[aria-checked="true"] {
     background-repeat: no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-out;

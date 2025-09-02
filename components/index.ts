@@ -38,6 +38,8 @@ export { default as HeartElement } from "./HeartElement";
 export { default as AddToWishlistBtn } from "./AddToWishlistBtn";
 export { default as Hero } from "./Hero"; 
 export { default as IntroducingSection } from "./IntroducingSection";
+export { default as OurProcessSection } from "./OurProcessSection";
+export { default as MorphingLogoSVG } from "./MorphingLogoSVG";
 export { default as Heading } from "./Heading";
 export { default as DashboardSidebar } from "./DashboardSidebar";
 export { default as StatsElement } from "./StatsElement";
